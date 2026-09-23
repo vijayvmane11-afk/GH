@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GirlHacks Mentor is a friendly AI helper for hackathon teams.">
+  <title>GirlHacks Mentor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="chat-card" aria-label="GirlHacks Mentor chat">
+      <header class="app-header">
+        <div class="brand-mark" aria-hidden="true">GH</div>
+        <div>
+          <p class="eyebrow">Your hackathon sidekick</p>
+          <h1>GirlHacks Mentor</h1>
+          <p class="subtitle"><span class="status-dot" aria-hidden="true"></span>Powered by Azure AI Foundry</p>
+        </div>
+      </header>
+
+      <div class="chat-content">
+        <div class="welcome-panel">
+          <p class="welcome-kicker">Let&apos;s build something great</p>
+          <h2>What are you working on?</h2>
+          <p>Ask for ideas, feedback, or a little momentum when your team needs it.</p>
+        </div>
+
+        <div id="chat-messages" class="chat-messages" aria-live="polite" aria-label="Chat messages">
+          <div class="message assistant-message">
+            <div class="message-avatar" aria-hidden="true">GH</div>
+            <div class="message-bubble">
+              <p>Hi! I&apos;m your GirlHacks Mentor. I can help you brainstorm, plan, and polish your hackathon project.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggested-prompts" aria-label="Suggested prompts">
+          <button class="prompt-button" type="button">What is the GirlHacks theme?</button>
+          <button class="prompt-button" type="button">Suggest a beginner hackathon project.</button>
+          <button class="prompt-button" type="button">Explain the judging criteria.</button>
+          <button class="prompt-button" type="button">Help my team choose a project.</button>
+        </div>
+
+        <form id="chat-form" class="chat-form">
+          <label class="sr-only" for="message-input">Type your message</label>
+          <textarea id="message-input" rows="1" placeholder="Ask your mentor anything..." autocomplete="off" required></textarea>
+          <button id="send-button" class="send-button" type="submit" aria-label="Send message">
+            <span>Send</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </form>
+        <p class="helper-text">Press Enter to send &middot; Shift + Enter for a new line</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
